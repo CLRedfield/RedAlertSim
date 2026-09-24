@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "date": "2026-09-12",
+  "completed": true,
+  "passed": 15,
+  "checks": [
+    "Setup exposes all three fog modes and starts the selected mode in the Worker",
+    "F4 cycles and focuses existing factories; K switches the authoritative primary factory",
+    "Q/W pick ready buildings; cell preview and actual placement use identical grid snapping",
+    "Grid, health and order overlay toggles work; occupied foundations display an invalid preview",
+    "Holding Z draws two numbered waypoints without moving; key release submits the real route",
+    "Shift-click appends movement and S cancels every pending waypoint",
+    "Persistent waypoint tool supports undo, cancel and Enter confirmation",
+    "Double-click selects visible same-type units; control groups, double-tap focus and global T selection work",
+    "Held-key repeat does not cycle buildings repeatedly; double-click sets primary production",
+    "E and Alt+1 initiate GI production; Tanya card pauses, resumes and cancels using real right/left clicks",
+    "Attack-move can be issued from the radar minimap",
+    "Keyboard settings rebind an actual building shortcut and restore all defaults",
+    "Single-player pause menu changes all three fog rules in the simulation, not only in the renderer",
+    "Alt plus real world click produces force-movement and crushes enemy infantry in the Worker",
+    "Operational UI completed without JavaScript exceptions or WebGL errors"
+  ],
+  "errors": [],
+  "environment": "Chromium 144 / Xvfb / ANGLE SwiftShader. Fixture saves, real keyboard+pointer+Worker execution. No physical GPU or Windows test."
+}

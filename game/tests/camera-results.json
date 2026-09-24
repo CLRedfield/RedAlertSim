@@ -1,0 +1,117 @@
+{
+  "version": "1.0.0",
+  "date": "2026-09-05",
+  "passed": 27,
+  "total": 27,
+  "results": [
+    {
+      "name": "Camera preferences reject invalid fields, clamp limits and keep defaults",
+      "passed": true
+    },
+    {
+      "name": "Short right click with small jitter remains a click and does not pan",
+      "passed": true
+    },
+    {
+      "name": "Long stationary right hold consumes release without moving the camera",
+      "passed": true
+    },
+    {
+      "name": "Fast deliberate drag promotes before the hold timer elapses",
+      "passed": true
+    },
+    {
+      "name": "Grab moves the projected ground by the exact CSS pointer displacement",
+      "passed": true
+    },
+    {
+      "name": "Many pointer moves add up without repeatedly applying the same delta",
+      "passed": true
+    },
+    {
+      "name": "Drag sensitivity and inverted grab direction apply exactly once",
+      "passed": true
+    },
+    {
+      "name": "Disabling right dragging restores stationary long-click behavior",
+      "passed": true
+    },
+    {
+      "name": "Middle drag is immediate even with right dragging disabled",
+      "passed": true
+    },
+    {
+      "name": "Left selection gestures suppress keys and edges without panning",
+      "passed": true
+    },
+    {
+      "name": "Continuous-scroll mode keeps moving while pointer stays displaced",
+      "passed": true
+    },
+    {
+      "name": "Continuous scroll dead zone stops, and releasing adds no drift",
+      "passed": true
+    },
+    {
+      "name": "Edge scroll respects dwell delay and strength at the playable boundary",
+      "passed": true
+    },
+    {
+      "name": "HUD hover, outside coordinates and disabled edge scroll do not pan",
+      "passed": true
+    },
+    {
+      "name": "Fullscreen-only edge setting is enforced",
+      "passed": true
+    },
+    {
+      "name": "Bottom edge is actionable with a point just inside the canvas",
+      "passed": true
+    },
+    {
+      "name": "Diagonal keyboard speed is normalized and Shift accelerates",
+      "passed": true
+    },
+    {
+      "name": "Camera travel is frame-rate independent at 30 and 120 updates per second",
+      "passed": true
+    },
+    {
+      "name": "Smooth start still stops immediately when the direction is released",
+      "passed": true
+    },
+    {
+      "name": "Ground under the mouse stays anchored throughout smooth zoom",
+      "passed": true
+    },
+    {
+      "name": "Center zoom option does not move the camera target",
+      "passed": true
+    },
+    {
+      "name": "Wheel pixel, line and page modes convert to the same intended distance",
+      "passed": true
+    },
+    {
+      "name": "Rapid wheel bursts respect zoom and map boundaries",
+      "passed": true
+    },
+    {
+      "name": "Blur/modal cancellation releases gesture and pending wheel animation",
+      "passed": true
+    },
+    {
+      "name": "Focus and reset zoom cancel pending motion and sync picking matrices",
+      "passed": true
+    },
+    {
+      "name": "Camera clamps target at world boundaries without NaN",
+      "passed": true
+    },
+    {
+      "name": "Current and original v0.3.0 save fixtures load and resave as the current release",
+      "passed": true
+    }
+  ],
+  "environment": "Node.js v22.16.0. Camera math and input state, not physical mouse/GPU performance."
+}

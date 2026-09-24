@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "date": "2026-09-12",
+  "completed": true,
+  "passed": 9,
+  "checks": [
+    "New eight-section headquarters renders at 1280x800",
+    "Six maps, four editable seats, equal-team preset and duplicate-color launch rejection work in UI",
+    "Searchable catalog opens real unit prerequisites and closes safely with Escape",
+    "Real movement command completes training in Worker and unlocks next-lesson UI",
+    "Actual replay download/import supports pause, speed, seek, POV and blocks battle commands",
+    "Online entry distinguishes public relay/browser host from a deployed dedicated server",
+    "Two real clients join lobby; chat renders hostile-looking markup strictly as text",
+    "Real socket close locks commands; automatic reconnect retains seat and continues fog-filtered match",
+    "Surrender reaches new result screen with no browser exception or WebGL error"
+  ],
+  "errors": [],
+  "environment": "Chromium / Xvfb / SwiftShader; full HTML in-memory, real downloads/file input/Worker and two actual browser loopback WebSockets. Not physical LAN/public/Windows tests."
+}

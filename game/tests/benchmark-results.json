@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-12T11:24:35.963Z",
+  "runtime": "v22.16.0",
+  "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+  "scope": "Synthetic simulation only; dense eight-owner combat with invulnerability to hold entity count constant; excludes rendering, GPU and network transfer. This is NOT RTX 4060 frame-rate evidence.",
+  "rows": [
+    {
+      "initialUnits": 100,
+      "steps": 100,
+      "simulatedSeconds": 10,
+      "remainingUnits": 100,
+      "meanStepMs": 1.222,
+      "p95StepMs": 1.697,
+      "snapshotBytes": 58768
+    },
+    {
+      "initialUnits": 300,
+      "steps": 100,
+      "simulatedSeconds": 10,
+      "remainingUnits": 300,
+      "meanStepMs": 1.734,
+      "p95StepMs": 2.792,
+      "snapshotBytes": 152267
+    },
+    {
+      "initialUnits": 600,
+      "steps": 100,
+      "simulatedSeconds": 10,
+      "remainingUnits": 600,
+      "meanStepMs": 4.312,
+      "p95StepMs": 9.403,
+      "snapshotBytes": 292561
+    }
+  ]
+}

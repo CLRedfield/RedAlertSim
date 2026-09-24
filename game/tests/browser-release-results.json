@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "completed": true,
+  "passed": 14,
+  "checks": [
+    "Eight-section menu initializes without CDN, automatic broker requests or telemetry",
+    "Six mission cards expose separate local and cooperative entry points",
+    "Coop entry locks objective teams/map and defaults to private EMQX invitation mode",
+    "Unavailable secure-context crypto yields an actionable error, not a fake connection",
+    "LAN and public relay forms switch independently without implying an online dedicated server",
+    "Technology view is built from actual nation prerequisites and exposes live unit data",
+    "Contrast and random seed settings apply through visible controls",
+    "Escort launches in the real simulation Worker with mission HUD and map objectives",
+    "Four save slots report blocked storage honestly; real JSON export retains mission state",
+    "Detailed meshes render in medium quality and are actually omitted by distant LOD",
+    "Exit mission returns to operation selection without leaking previous mission setup",
+    "Observer waiting screen supports opening/closing the menu before its first state arrives",
+    "960-pixel layout remains horizontally contained with the connection controls reachable",
+    "New release screens finish with no uncaught browser exception"
+  ],
+  "errors": [],
+  "environment": "Headed Chromium / Xvfb / software WebGL; full HTML in-memory, real Worker and file export. Opaque origin cannot access IndexedDB or WebCrypto, so failure handling is checked. Spectator waiting UI uses a fixture; real authority and encrypted transport are tested independently."
+}

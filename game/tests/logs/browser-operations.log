@@ -1,0 +1,15 @@
+PASS Setup exposes all three fog modes and starts the selected mode in the Worker
+PASS F4 cycles and focuses existing factories; K switches the authoritative primary factory
+PASS Q/W pick ready buildings; cell preview and actual placement use identical grid snapping
+PASS Grid, health and order overlay toggles work; occupied foundations display an invalid preview
+PASS Holding Z draws two numbered waypoints without moving; key release submits the real route
+PASS Shift-click appends movement and S cancels every pending waypoint
+PASS Persistent waypoint tool supports undo, cancel and Enter confirmation
+PASS Double-click selects visible same-type units; control groups, double-tap focus and global T selection work
+PASS Held-key repeat does not cycle buildings repeatedly; double-click sets primary production
+PASS E and Alt+1 initiate GI production; Tanya card pauses, resumes and cancels using real right/left clicks
+PASS Attack-move can be issued from the radar minimap
+PASS Keyboard settings rebind an actual building shortcut and restore all defaults
+PASS Single-player pause menu changes all three fog rules in the simulation, not only in the renderer
+PASS Alt plus real world click produces force-movement and crushes enemy infantry in the Worker
+PASS Operational UI completed without JavaScript exceptions or WebGL errors

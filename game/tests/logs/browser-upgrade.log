@@ -1,0 +1,9 @@
+PASS New eight-section headquarters renders at 1280x800
+PASS Six maps, four editable seats, equal-team preset and duplicate-color launch rejection work in UI
+PASS Searchable catalog opens real unit prerequisites and closes safely with Escape
+PASS Real movement command completes training in Worker and unlocks next-lesson UI
+PASS Actual replay download/import supports pause, speed, seek, POV and blocks battle commands
+PASS Online entry distinguishes public relay/browser host from a deployed dedicated server
+PASS Two real clients join lobby; chat renders hostile-looking markup strictly as text
+PASS Real socket close locks commands; automatic reconnect retains seat and continues fog-filtered match
+PASS Surrender reaches new result screen with no browser exception or WebGL error

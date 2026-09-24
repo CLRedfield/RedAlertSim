@@ -1,0 +1,10 @@
+# Template: automatic HTTPS requires a real domain pointing at this host.
+{$DOMAIN} {
+    encode zstd gzip
+    header {
+        X-Content-Type-Options "nosniff"
+        Referrer-Policy "no-referrer"
+        X-Frame-Options "SAMEORIGIN"
+    }
+    reverse_proxy game:8787
+}

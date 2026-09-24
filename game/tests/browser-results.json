@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "date": "2026-09-12",
+  "completed": true,
+  "browser": "Chromium 144, headed Xvfb, ANGLE SwiftShader software WebGL2",
+  "page_source": "Complete release HTML injected with Playwright set_content, no navigation policy changes",
+  "passed": 9,
+  "checks": [
+    "Full offline HTML initialized, WebGL shader compiled without errors",
+    "Single-player Web Worker advances two-seat simulation",
+    "Factory queued in sidebar, placed via mouse, tank trained via production card",
+    "Worker save serialization and loaded state resume",
+    "Pause stops simulation; resume advances it",
+    "All 129 catalog procedural meshes generated and uploaded, one representative rendered without WebGL errors",
+    "Yuri sandbox UI generates five selected units",
+    "Two full browser clients create/join/ready/start real WebSocket room",
+    "No browser JavaScript or WebGL errors recorded"
+  ],
+  "errors": []
+}

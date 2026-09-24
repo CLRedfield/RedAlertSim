@@ -1,0 +1,139 @@
+{
+  "version": "1.0.0",
+  "date": "2026-09-12T11:21:22.740Z",
+  "environment": "Node v22.16.0; localhost TCP; up to 8 same-host virtual match clients, not physical network validation",
+  "passed": 30,
+  "total": 30,
+  "results": [
+    {
+      "name": "HTTP health, self-contained page and API metadata",
+      "passed": true
+    },
+    {
+      "name": "Protocol and content mismatch reject room creation",
+      "passed": true
+    },
+    {
+      "name": "Two independent clients join the same real room",
+      "passed": true
+    },
+    {
+      "name": "Non-host start/configure and foreign-seat mutation rejected",
+      "passed": true
+    },
+    {
+      "name": "Start waits for guest ready state",
+      "passed": true
+    },
+    {
+      "name": "Host edits map; player edits their own nation",
+      "passed": true
+    },
+    {
+      "name": "Public room directory and private-room flag",
+      "passed": true
+    },
+    {
+      "name": "Team-only chat is not sent to the enemy",
+      "passed": true
+    },
+    {
+      "name": "Chat is bounded plain text, not interpreted markup",
+      "passed": true
+    },
+    {
+      "name": "Opposite starting positions and filtered fog on both clients",
+      "passed": true
+    },
+    {
+      "name": "Client ACK causes smaller delta updates and valid reconstruction",
+      "passed": true
+    },
+    {
+      "name": "Enemy ID commands and sandbox commands are rejected",
+      "passed": true
+    },
+    {
+      "name": "Out-of-bounds coordinates and repeated sequence are rejected",
+      "passed": true
+    },
+    {
+      "name": "Accepted move changes an owned unit position authoritatively",
+      "passed": true
+    },
+    {
+      "name": "Live replay download cannot reveal hidden state",
+      "passed": true
+    },
+    {
+      "name": "Token reconnect restores same slot, simulation and sequence",
+      "passed": true
+    },
+    {
+      "name": "Empty and incorrect tokens cannot steal a reserved slot",
+      "passed": true
+    },
+    {
+      "name": "Explicit resync replaces baseline with a full state",
+      "passed": true
+    },
+    {
+      "name": "End state includes results and deterministic replay export",
+      "passed": true
+    },
+    {
+      "name": "Host rematch returns to lobby and resets command sequence",
+      "passed": true
+    },
+    {
+      "name": "No-opponent room refuses to start instead of instant victory",
+      "passed": true
+    },
+    {
+      "name": "Private room excluded from discovery",
+      "passed": true
+    },
+    {
+      "name": "Eight virtual clients receive independent authoritative filtered states",
+      "passed": true
+    },
+    {
+      "name": "Per-IP room creation quota prevents unlimited lobby allocation",
+      "passed": true
+    },
+    {
+      "name": "Message flood is rejected without stopping other rooms",
+      "passed": true
+    },
+    {
+      "name": "Oversized WebSocket frame is closed",
+      "passed": true
+    },
+    {
+      "name": "Wrong browser Origin fails the WebSocket handshake",
+      "passed": true
+    },
+    {
+      "name": "Mature WebSocket implementation handles fragmented text frames",
+      "passed": true
+    },
+    {
+      "name": "Observed metrics",
+      "passed": true,
+      "metrics": {
+        "created": 4,
+        "messages": 393,
+        "bytesOut": 539811,
+        "full": 14,
+        "delta": 174,
+        "rejected": 66,
+        "resumed": 1
+      }
+    },
+    {
+      "name": "Metrics record delta frames and session resumes",
+      "passed": true
+    }
+  ],
+  "serverLog": "\nRED ALERT 3D / COMMAND EDITION 1.0.0\nOpen: http://127.0.0.1:18787\nContent: 719fdc55 | Ctrl+C stops this server.\n\n[room 3E3B9B] started 2 humans\n[room 7C249E] started 8 humans\n"
+}

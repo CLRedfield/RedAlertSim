@@ -1,0 +1,104 @@
+{
+  "version": "1.0.0",
+  "runtime": "v22.16.0",
+  "date": "2026-09-12T11:21:10.496Z",
+  "passed": 19,
+  "total": 19,
+  "results": [
+    {
+      "name": "10 nations and all catalog definitions have finite core data",
+      "passed": true,
+      "ms": 8.04
+    },
+    {
+      "name": "All nation starts: eight seats, headquarters and worker",
+      "passed": true,
+      "ms": 484.79
+    },
+    {
+      "name": "Real economy: ore depletion and deposited credits",
+      "passed": true,
+      "ms": 114.81
+    },
+    {
+      "name": "Production, placement validation and factory spawn",
+      "passed": true,
+      "ms": 19.29
+    },
+    {
+      "name": "Production cancel refunds exactly before simulation",
+      "passed": true,
+      "ms": 1.02
+    },
+    {
+      "name": "MCV deployment with no initial headquarters",
+      "passed": true,
+      "ms": 12.21
+    },
+    {
+      "name": "Ownership enforcement and sandbox authorization",
+      "passed": true,
+      "ms": 4.03
+    },
+    {
+      "name": "Fog-filtered client state does not expose remote enemy army",
+      "passed": true,
+      "ms": 18.93
+    },
+    {
+      "name": "Path following actually moves land units",
+      "passed": true,
+      "ms": 78.02
+    },
+    {
+      "name": "Mind control ownership, controller death and overload",
+      "passed": true,
+      "ms": 8.18
+    },
+    {
+      "name": "Engineer captures neutral oil and generates income",
+      "passed": true,
+      "ms": 39.76
+    },
+    {
+      "name": "Neutral garrison, unloading and transport vehicle passengers",
+      "passed": true,
+      "ms": 22.97
+    },
+    {
+      "name": "Superweapon damages targets and consumes charge",
+      "passed": true,
+      "ms": 3.76
+    },
+    {
+      "name": "Save/load fixed-state consistency and continuing simulation",
+      "passed": true,
+      "ms": 191.26
+    },
+    {
+      "name": "Seed determinism: independent eight-seat simulation",
+      "passed": true,
+      "ms": 1220.49
+    },
+    {
+      "name": "Victory and surrender reach a result",
+      "passed": true,
+      "ms": 1.46
+    },
+    {
+      "name": "Sandbox AI switch and vacant host slot",
+      "passed": true,
+      "ms": 1.89
+    },
+    {
+      "name": "Every catalog definition can run in an isolated sandbox",
+      "passed": true,
+      "ms": 265.63
+    },
+    {
+      "name": "Eight-seat 600-second match with finite state and AI combat",
+      "passed": true,
+      "ms": 12094.98
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "red-alert-3d-command-edition",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Self-contained 3D RTS with encrypted public MQTT relay, browser-hosted authority, cooperative operations, delayed observers and checkpoint replays",
+  "scripts": {
+    "start": "node server/server.cjs",
+    "lan": "node server/server.cjs --host 0.0.0.0 --open",
+    "build": "python tools/build.py",
+    "test": "node tests/sim.test.cjs --json && node tests/operations.test.cjs && node tests/camera.test.cjs && node tests/upgrade.test.cjs && node tests/release.test.cjs && node tests/network.test.cjs && node tests/mqtt.test.cjs",
+    "test:browser": "node tests/run-browser.cjs",
+    "benchmark": "node tests/benchmark.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}

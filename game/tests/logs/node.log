@@ -1,0 +1,208 @@
+
+> red-alert-3d-command-edition@1.0.0 test
+> node tests/sim.test.cjs --json && node tests/operations.test.cjs && node tests/camera.test.cjs && node tests/upgrade.test.cjs && node tests/release.test.cjs && node tests/network.test.cjs && node tests/mqtt.test.cjs
+
+PASS 10 nations and all catalog definitions have finite core data 8.04ms
+PASS All nation starts: eight seats, headquarters and worker 484.79ms
+PASS Real economy: ore depletion and deposited credits 114.81ms
+PASS Production, placement validation and factory spawn 19.29ms
+PASS Production cancel refunds exactly before simulation 1.02ms
+PASS MCV deployment with no initial headquarters 12.21ms
+PASS Ownership enforcement and sandbox authorization 4.03ms
+PASS Fog-filtered client state does not expose remote enemy army 18.93ms
+PASS Path following actually moves land units 78.02ms
+PASS Mind control ownership, controller death and overload 8.18ms
+PASS Engineer captures neutral oil and generates income 39.76ms
+PASS Neutral garrison, unloading and transport vehicle passengers 22.97ms
+PASS Superweapon damages targets and consumes charge 3.76ms
+PASS Save/load fixed-state consistency and continuing simulation 191.26ms
+PASS Seed determinism: independent eight-seat simulation 1220.49ms
+PASS Victory and surrender reach a result 1.46ms
+PASS Sandbox AI switch and vacant host slot 1.89ms
+PASS Every catalog definition can run in an isolated sandbox 265.63ms
+  Match: 592.0 sim seconds, 69 entities, 760 kills, winner 1
+PASS Eight-seat 600-second match with finite state and AI combat 12094.98ms
+
+19/19 checks passed
+PASS Normal movement crushes enemy infantry along the swept tank track
+PASS Force-move crosses an enemy target instead of stopping to shoot
+PASS Crush immunity: allies, garrison, iron curtain and deployed guardian infantry
+PASS Battle fortress crushes ordinary vehicles, ordinary tanks do not
+PASS Three-node movement plan reaches corners sequentially and drains its queue
+PASS Shift-style append preserves active order; normal command replaces the whole route
+PASS Stop cancels active movement and every queued waypoint
+PASS Invalid plans are rejected atomically, including NaN and more than 64 nodes
+PASS Hidden-target IDs and another player units cannot be ordered
+PASS Queue plans survive save/load with deterministic continuation
+PASS Patrol reverses after reaching its endpoint
+PASS Guard engages without chasing enemies outside weapon range
+PASS Scatter requires no mouse coordinates and produces finite movement orders
+PASS Force-fire can damage a friendly target while normal targeting cannot
+PASS Ctrl-style ground fire persists at a point and damages units at that point
+PASS Every building footprint snaps to the same 2-world-unit grid
+PASS Foundation placement rejects map edges, occupied cells and blocking infantry
+PASS Placement checks all cells for land/water and denies unexplored ground
+PASS Client preview and authoritative placement agree and share snapped coordinates
+PASS Building and defense production may both wait ready without blocking each other
+PASS Pause, resume and cancellation preserve progress and refund exact queue cost
+PASS Primary factory governs spawning and falls back after destruction
+PASS Newly trained units inherit the full factory rally route
+PASS Blocked factory exit retains completed purchase until an exit is available
+PASS Double fog hides departed enemies, retaining only last-seen building ghosts
+PASS Single fog permanently reveals explored terrain and moving enemies there
+PASS No-fog reveals all terrain but does not disable stealth detection rules
+PASS Snapshot redacts other players orders, paths, targets and rally destinations
+PASS Hidden ore depletion does not leak through the double-fog snapshot
+PASS Network locks fog and sandbox commands; single-player can change all three modes
+PASS Rapid consecutive production right-clicks use server state, not stale client state
+PASS Right-click ready building refunds it; shift-right-click also clears matching waiting items
+
+32/32 operational checks passed
+PASS Camera preferences reject invalid fields, clamp limits and keep defaults
+PASS Short right click with small jitter remains a click and does not pan
+PASS Long stationary right hold consumes release without moving the camera
+PASS Fast deliberate drag promotes before the hold timer elapses
+PASS Grab moves the projected ground by the exact CSS pointer displacement
+PASS Many pointer moves add up without repeatedly applying the same delta
+PASS Drag sensitivity and inverted grab direction apply exactly once
+PASS Disabling right dragging restores stationary long-click behavior
+PASS Middle drag is immediate even with right dragging disabled
+PASS Left selection gestures suppress keys and edges without panning
+PASS Continuous-scroll mode keeps moving while pointer stays displaced
+PASS Continuous scroll dead zone stops, and releasing adds no drift
+PASS Edge scroll respects dwell delay and strength at the playable boundary
+PASS HUD hover, outside coordinates and disabled edge scroll do not pan
+PASS Fullscreen-only edge setting is enforced
+PASS Bottom edge is actionable with a point just inside the canvas
+PASS Diagonal keyboard speed is normalized and Shift accelerates
+PASS Camera travel is frame-rate independent at 30 and 120 updates per second
+PASS Smooth start still stops immediately when the direction is released
+PASS Ground under the mouse stays anchored throughout smooth zoom
+PASS Center zoom option does not move the camera target
+PASS Wheel pixel, line and page modes convert to the same intended distance
+PASS Rapid wheel bursts respect zoom and map boundaries
+PASS Blur/modal cancellation releases gesture and pending wheel animation
+PASS Focus and reset zoom cancel pending motion and sync picking matrices
+PASS Camera clamps target at world boundaries without NaN
+PASS Current and original v0.3.0 save fixtures load and resave as the current release
+27/27 camera checks passed
+PASS Two-player auto spawns are opposite and separated >150 world units
+PASS 2 active spawn slots are distinct
+PASS 4 active spawn slots are distinct
+PASS 6 active spawn slots are distinct
+PASS 8 active spawn slots are distinct
+PASS Explicit spawns and closed slots are respected
+PASS Equal starting ore volume, mineral type and relative distance at all 8 sites
+PASS Six genuinely distinct resource and neutral object layouts
+PASS Setup rejects no enemy team and duplicated player colors/spawns
+PASS Unopposed sandbox does not instantly win
+PASS Yuri refinery creates five individually simulated slaves
+PASS Yuri economy depletes actual ore, no income with no ore
+PASS Destroyed slave master releases workers to the attacker
+PASS Single-passenger unload enforces carrier ownership
+PASS IFV engineer changes weapon to repair, sniper blocks armor target
+PASS Tesla troopers charge tower with independent charge status
+PASS Magnet lift prevents movement without erasing EMP stun
+PASS Ivan bomb waits before doing damage
+PASS Aircraft allocate 4 pads and the fifth waits
+PASS Aircraft replenish real ammo after docking timer
+PASS Move training completes from actual commands
+PASS Capture training completes from actual engineer order
+PASS IFV training completes from actual passenger and repair orders
+PASS Mind-control training completes and disables enemy AI
+PASS Production training requires placed factory and an additional tank
+PASS Survival wave schedule produces marked enemy attackers
+PASS Fair AI has no hidden base intelligence at start
+PASS Save loader rejects oversized/malformed data and prototype fields
+PASS Save import cannot replace simulator methods
+PASS Replay of player commands plus AI is deterministic at fixed ticks
+PASS Replay rejects incompatible content and unsorted command timeline
+PASS Fog-filtered wire baseline contains no remote army/order/hidden ore state
+PASS ACK delta round-trip preserves state including removed properties and fog cells
+PASS Enemy projectiles originating in invisible territory are not sent
+PASS Equal-team preset remains valid at 2, 4, 6 and 8 seats
+PASS Valid drawn-game save preserves the -1 result
+36/36 upgrade checks passed
+PASS holdout: objective, teams, load/save and serializable player view
+PASS holdout: timeout is authoritative and ends the operation
+PASS oil: objective, teams, load/save and serializable player view
+PASS oil: timeout is authoritative and ends the operation
+PASS escort: objective, teams, load/save and serializable player view
+PASS escort: timeout is authoritative and ends the operation
+PASS blackout: objective, teams, load/save and serializable player view
+PASS blackout: timeout is authoritative and ends the operation
+PASS siege: objective, teams, load/save and serializable player view
+PASS siege: timeout is authoritative and ends the operation
+PASS extraction: objective, teams, load/save and serializable player view
+PASS extraction: timeout is authoritative and ends the operation
+PASS Allied-base loss ends mission even while enemy HQ survives
+PASS Holdout never wins while eighth-wave enemies remain alive
+PASS Oil control counter pauses below majority and resumes to 90
+PASS Escort waits without guards and rejects direct convoy orders
+PASS Escort has five real waypoint tests and convoy destruction fails
+PASS Blackout requires every radar, supports capture as well as destruction
+PASS Siege cannot win only by destroying the ordinary enemy HQ
+PASS Extraction requires physical rescue, clear extraction area and guards
+PASS Extraction fails if an unrescued squad is destroyed
+PASS Objective cadence is exactly once per second and is preserved after load
+PASS Operation score is based on time and losses, not a guaranteed three-star badge
+PASS Mission data rejects unknown identifiers and oversized target lists
+PASS Replay v2 checkpoints preserve simulation and seek from nearest full state
+PASS Operation replay seeks across checkpoint with matching objectives and entities
+PASS Replay rejects forged checkpoint times and journal offsets
+PASS Cooperative authority reserves two human seats and starts correct mission rules
+PASS Spectator is capped, delayed, cannot chat or send commands and can resume
+PASS Shared authority enforces message byte ceiling, not just the Node WS wrapper
+PASS Friendly mission AI escorts the convoy rather than scouting unrelated HQs
+PASS Friendly mission engineers receive capture orders for briefing-marked oil
+PASS All 129 detailed model variants contain only finite triangles within budgets
+33 release checks passed, 0 failed
+PASS HTTP health, self-contained page and API metadata
+PASS Protocol and content mismatch reject room creation
+PASS Two independent clients join the same real room
+PASS Non-host start/configure and foreign-seat mutation rejected
+PASS Start waits for guest ready state
+PASS Host edits map; player edits their own nation
+PASS Public room directory and private-room flag
+PASS Team-only chat is not sent to the enemy
+PASS Chat is bounded plain text, not interpreted markup
+PASS Opposite starting positions and filtered fog on both clients
+PASS Client ACK causes smaller delta updates and valid reconstruction
+PASS Enemy ID commands and sandbox commands are rejected
+PASS Out-of-bounds coordinates and repeated sequence are rejected
+PASS Accepted move changes an owned unit position authoritatively
+PASS Live replay download cannot reveal hidden state
+PASS Token reconnect restores same slot, simulation and sequence
+PASS Empty and incorrect tokens cannot steal a reserved slot
+PASS Explicit resync replaces baseline with a full state
+PASS End state includes results and deterministic replay export
+PASS Host rematch returns to lobby and resets command sequence
+PASS No-opponent room refuses to start instead of instant victory
+PASS Private room excluded from discovery
+PASS Eight virtual clients receive independent authoritative filtered states
+PASS Per-IP room creation quota prevents unlimited lobby allocation
+PASS Message flood is rejected without stopping other rooms
+PASS Oversized WebSocket frame is closed
+PASS Wrong browser Origin fails the WebSocket handshake
+PASS Mature WebSocket implementation handles fragmented text frames
+PASS Metrics record delta frames and session resumes
+30/30 network checks passed
+PASS MQTT 3.1.1 native WebSocket CONNECT / SUBSCRIBE / QoS1
+PASS Bounded parser accepts fragmentation and rejects oversized length
+PASS ECDH pairwise keys roundtrip, reject wrong AAD and replay
+PASS Browser host starts shared RoomService through MQTT
+PASS Guest joins encrypted invitation without local game server
+PASS Invitations pin broker and host key; malformed invitations rejected
+PASS Room ready / start sends distinct fog-filtered state to both peers
+PASS Encrypted game commands reach authority with sequence acknowledgement
+PASS Relay payload does not contain plaintext commands, player names or snapshots
+PASS Late observer enters read-only delayed spectator mode
+PASS Tampered ciphertext is rejected without applying game state
+PASS Client reconnect reuses seat and synchronizes a fresh baseline
+PASS Large encrypted payload fragments and reassembles completely
+PASS Public directory only appears after explicit public-room creation
+PASS Eight encrypted clients start and receive separately filtered player snapshots
+PASS Host relay outage pauses simulation and resumes its original session
+PASS Observer receives a snapshot no newer than 30 simulated seconds
+PASS Explicit host exit notifies remaining guests and cancels reconnect loops
+18 MQTT checks passed, 0 failed

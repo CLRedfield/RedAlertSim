@@ -1,0 +1,38 @@
+# A real domain and operator authorization are required. No service is live by default.
+services:
+  game:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    environment:
+      PUBLIC_MODE: "1"
+      ORIGINS: "https://${DOMAIN:?Set an authorized real domain in .env}"
+      SERVER_NAME: "${SERVER_NAME:-Command Edition}"
+    restart: unless-stopped
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp:size=32m
+    mem_limit: 1g
+    cpus: 2.0
+    pids_limit: 100
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+    expose: ["8787"]
+  caddy:
+    image: caddy:2
+    environment:
+      DOMAIN: "${DOMAIN:?Set an authorized real domain in .env}"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    restart: unless-stopped
+    depends_on: [game]
+volumes:
+  caddy_data:
+  caddy_config:

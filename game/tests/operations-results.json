@@ -1,0 +1,169 @@
+{
+  "version": "1.0.0",
+  "runtime": "v22.16.0",
+  "date": "2026-09-12T11:21:10.907Z",
+  "passed": 32,
+  "total": 32,
+  "results": [
+    {
+      "name": "Normal movement crushes enemy infantry along the swept tank track",
+      "passed": true,
+      "ms": 17.54
+    },
+    {
+      "name": "Force-move crosses an enemy target instead of stopping to shoot",
+      "passed": true,
+      "ms": 4.74
+    },
+    {
+      "name": "Crush immunity: allies, garrison, iron curtain and deployed guardian infantry",
+      "passed": true,
+      "ms": 2.25
+    },
+    {
+      "name": "Battle fortress crushes ordinary vehicles, ordinary tanks do not",
+      "passed": true,
+      "ms": 2.52
+    },
+    {
+      "name": "Three-node movement plan reaches corners sequentially and drains its queue",
+      "passed": true,
+      "ms": 9.62
+    },
+    {
+      "name": "Shift-style append preserves active order; normal command replaces the whole route",
+      "passed": true,
+      "ms": 2.44
+    },
+    {
+      "name": "Stop cancels active movement and every queued waypoint",
+      "passed": true,
+      "ms": 6.95
+    },
+    {
+      "name": "Invalid plans are rejected atomically, including NaN and more than 64 nodes",
+      "passed": true,
+      "ms": 2.07
+    },
+    {
+      "name": "Hidden-target IDs and another player units cannot be ordered",
+      "passed": true,
+      "ms": 3.74
+    },
+    {
+      "name": "Queue plans survive save/load with deterministic continuation",
+      "passed": true,
+      "ms": 26.42
+    },
+    {
+      "name": "Patrol reverses after reaching its endpoint",
+      "passed": true,
+      "ms": 25.86
+    },
+    {
+      "name": "Guard engages without chasing enemies outside weapon range",
+      "passed": true,
+      "ms": 5.79
+    },
+    {
+      "name": "Scatter requires no mouse coordinates and produces finite movement orders",
+      "passed": true,
+      "ms": 3.24
+    },
+    {
+      "name": "Force-fire can damage a friendly target while normal targeting cannot",
+      "passed": true,
+      "ms": 3.64
+    },
+    {
+      "name": "Ctrl-style ground fire persists at a point and damages units at that point",
+      "passed": true,
+      "ms": 3.27
+    },
+    {
+      "name": "Every building footprint snaps to the same 2-world-unit grid",
+      "passed": true,
+      "ms": 3.54
+    },
+    {
+      "name": "Foundation placement rejects map edges, occupied cells and blocking infantry",
+      "passed": true,
+      "ms": 3.97
+    },
+    {
+      "name": "Placement checks all cells for land/water and denies unexplored ground",
+      "passed": true,
+      "ms": 4.32
+    },
+    {
+      "name": "Client preview and authoritative placement agree and share snapped coordinates",
+      "passed": true,
+      "ms": 3.11
+    },
+    {
+      "name": "Building and defense production may both wait ready without blocking each other",
+      "passed": true,
+      "ms": 10.16
+    },
+    {
+      "name": "Pause, resume and cancellation preserve progress and refund exact queue cost",
+      "passed": true,
+      "ms": 2.65
+    },
+    {
+      "name": "Primary factory governs spawning and falls back after destruction",
+      "passed": true,
+      "ms": 7.58
+    },
+    {
+      "name": "Newly trained units inherit the full factory rally route",
+      "passed": true,
+      "ms": 2.5
+    },
+    {
+      "name": "Blocked factory exit retains completed purchase until an exit is available",
+      "passed": true,
+      "ms": 46.59
+    },
+    {
+      "name": "Double fog hides departed enemies, retaining only last-seen building ghosts",
+      "passed": true,
+      "ms": 7.36
+    },
+    {
+      "name": "Single fog permanently reveals explored terrain and moving enemies there",
+      "passed": true,
+      "ms": 9.99
+    },
+    {
+      "name": "No-fog reveals all terrain but does not disable stealth detection rules",
+      "passed": true,
+      "ms": 6.17
+    },
+    {
+      "name": "Snapshot redacts other players orders, paths, targets and rally destinations",
+      "passed": true,
+      "ms": 1.88
+    },
+    {
+      "name": "Hidden ore depletion does not leak through the double-fog snapshot",
+      "passed": true,
+      "ms": 7.39
+    },
+    {
+      "name": "Network locks fog and sandbox commands; single-player can change all three modes",
+      "passed": true,
+      "ms": 7
+    },
+    {
+      "name": "Rapid consecutive production right-clicks use server state, not stale client state",
+      "passed": true,
+      "ms": 1.32
+    },
+    {
+      "name": "Right-click ready building refunds it; shift-right-click also clears matching waiting items",
+      "passed": true,
+      "ms": 11.9
+    }
+  ]
+}

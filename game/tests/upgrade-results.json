@@ -1,0 +1,152 @@
+{
+  "version": "1.0.0",
+  "date": "2026-09-12T11:21:14.066Z",
+  "passed": 36,
+  "total": 36,
+  "results": [
+    {
+      "name": "Two-player auto spawns are opposite and separated >150 world units",
+      "passed": true
+    },
+    {
+      "name": "2 active spawn slots are distinct",
+      "passed": true
+    },
+    {
+      "name": "4 active spawn slots are distinct",
+      "passed": true
+    },
+    {
+      "name": "6 active spawn slots are distinct",
+      "passed": true
+    },
+    {
+      "name": "8 active spawn slots are distinct",
+      "passed": true
+    },
+    {
+      "name": "Explicit spawns and closed slots are respected",
+      "passed": true
+    },
+    {
+      "name": "Equal starting ore volume, mineral type and relative distance at all 8 sites",
+      "passed": true
+    },
+    {
+      "name": "Six genuinely distinct resource and neutral object layouts",
+      "passed": true
+    },
+    {
+      "name": "Setup rejects no enemy team and duplicated player colors/spawns",
+      "passed": true
+    },
+    {
+      "name": "Unopposed sandbox does not instantly win",
+      "passed": true
+    },
+    {
+      "name": "Yuri refinery creates five individually simulated slaves",
+      "passed": true
+    },
+    {
+      "name": "Yuri economy depletes actual ore, no income with no ore",
+      "passed": true
+    },
+    {
+      "name": "Destroyed slave master releases workers to the attacker",
+      "passed": true
+    },
+    {
+      "name": "Single-passenger unload enforces carrier ownership",
+      "passed": true
+    },
+    {
+      "name": "IFV engineer changes weapon to repair, sniper blocks armor target",
+      "passed": true
+    },
+    {
+      "name": "Tesla troopers charge tower with independent charge status",
+      "passed": true
+    },
+    {
+      "name": "Magnet lift prevents movement without erasing EMP stun",
+      "passed": true
+    },
+    {
+      "name": "Ivan bomb waits before doing damage",
+      "passed": true
+    },
+    {
+      "name": "Aircraft allocate 4 pads and the fifth waits",
+      "passed": true
+    },
+    {
+      "name": "Aircraft replenish real ammo after docking timer",
+      "passed": true
+    },
+    {
+      "name": "Move training completes from actual commands",
+      "passed": true
+    },
+    {
+      "name": "Capture training completes from actual engineer order",
+      "passed": true
+    },
+    {
+      "name": "IFV training completes from actual passenger and repair orders",
+      "passed": true
+    },
+    {
+      "name": "Mind-control training completes and disables enemy AI",
+      "passed": true
+    },
+    {
+      "name": "Production training requires placed factory and an additional tank",
+      "passed": true
+    },
+    {
+      "name": "Survival wave schedule produces marked enemy attackers",
+      "passed": true
+    },
+    {
+      "name": "Fair AI has no hidden base intelligence at start",
+      "passed": true
+    },
+    {
+      "name": "Save loader rejects oversized/malformed data and prototype fields",
+      "passed": true
+    },
+    {
+      "name": "Save import cannot replace simulator methods",
+      "passed": true
+    },
+    {
+      "name": "Replay of player commands plus AI is deterministic at fixed ticks",
+      "passed": true
+    },
+    {
+      "name": "Replay rejects incompatible content and unsorted command timeline",
+      "passed": true
+    },
+    {
+      "name": "Fog-filtered wire baseline contains no remote army/order/hidden ore state",
+      "passed": true
+    },
+    {
+      "name": "ACK delta round-trip preserves state including removed properties and fog cells",
+      "passed": true
+    },
+    {
+      "name": "Enemy projectiles originating in invisible territory are not sent",
+      "passed": true
+    },
+    {
+      "name": "Equal-team preset remains valid at 2, 4, 6 and 8 seats",
+      "passed": true
+    },
+    {
+      "name": "Valid drawn-game save preserves the -1 result",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "release": "1.0.0",
+  "protocol": 5,
+  "content": "719fdc55",
+  "rules": "a4e9ebff",
+  "map": "80438c90",
+  "source": "ccc8fae2b854b750fd82dba0da7a89e9be66a92884683da24df9c578f329f623",
+  "checkedAt": "2026-09-12T11:24:49.886271+00:00",
+  "allReportItemsCompleted": false,
+  "publicMqttRelayImplemented": true,
+  "publicMqttExternalConnectivityVerified": false,
+  "publicServerDeployed": false,
+  "windowsRuntimeBundled": false,
+  "checks_passed": 264,
+  "node_checks": 195,
+  "browser_checks": 69,
+  "suites": [
+    {
+      "name": "基础模拟",
+      "file": "sim-results.json",
+      "kind": "node",
+      "passed": 19,
+      "completed": true,
+      "result_sha256": "5e0dd6a6709f389036986587044fd1b392e29a507eb530b7516454db157507a4"
+    },
+    {
+      "name": "生产与操作逻辑",
+      "file": "operations-results.json",
+      "kind": "node",
+      "passed": 32,
+      "completed": true,
+      "result_sha256": "d0238aef73043edeb9ac55b91b9890e085af05d3c3923bb921e246596adb0968"
+    },
+    {
+      "name": "相机数学/状态",
+      "file": "camera-results.json",
+      "kind": "node",
+      "passed": 27,
+      "completed": true,
+      "result_sha256": "4d1a91129aac45ea2d33159e8e527d9e1d00280e1ce3edf120f342342bdadc96"
+    },
+    {
+      "name": "既有升级机制/录像",
+      "file": "upgrade-results.json",
+      "kind": "node",
+      "passed": 36,
+      "completed": true,
+      "result_sha256": "e8d9aeca473d09acd2fb563d5fad0e89965583333a3d325ca3b4e85cbfe528a7"
+    },
+    {
+      "name": "六任务/检查点/观战/模型",
+      "file": "release-results.json",
+      "kind": "node",
+      "passed": 33,
+      "completed": true,
+      "result_sha256": "4e94799d553da1b437262da1b5ae690b396a01fd0ff0c26055feb2ea0188bdc5"
+    },
+    {
+      "name": "真实Node房间协议",
+      "file": "network-results.json",
+      "kind": "node",
+      "passed": 30,
+      "completed": true,
+      "result_sha256": "e4f96940f816c106a4fc46ee2e5f52d75cf6c897a94ed1618613411d3d0644d9"
+    },
+    {
+      "name": "加密MQTT/八客户端/主机恢复",
+      "file": "mqtt-results.json",
+      "kind": "node",
+      "passed": 18,
+      "completed": true,
+      "result_sha256": "0d868bf69eadd953018a72fc1b2ccc44249a90af2683c6961df2fe3dce4d6e5f"
+    },
+    {
+      "name": "完整页面/WebGL冒烟",
+      "file": "browser-results.json",
+      "kind": "browser",
+      "passed": 9,
+      "completed": true,
+      "result_sha256": "f9a1be9eff764a1423fced4fead7d0b31274eb2d2a5e8e9108da073e723cb17f"
+    },
+    {
+      "name": "生产与键鼠操作",
+      "file": "browser-operations-results.json",
+      "kind": "browser",
+      "passed": 15,
+      "completed": true,
+      "result_sha256": "12136476a30c2049ee9de06e159df8c8621ade36f33f9fd776e0d07379fa38c4"
+    },
+    {
+      "name": "镜头/联机输入",
+      "file": "browser-camera-results.json",
+      "kind": "browser",
+      "passed": 22,
+      "completed": true,
+      "result_sha256": "ee543d6e807e737bf51ae6d673cebe8710ddd9d387e6c0230249b2956b3ebd40"
+    },
+    {
+      "name": "训练/录像/房间/重连",
+      "file": "browser-upgrade-results.json",
+      "kind": "browser",
+      "passed": 9,
+      "completed": true,
+      "result_sha256": "e21a8cd8222d95dc3526df723f45875f9c5f1132754c76b4b5dcdb2916089f3c"
+    },
+    {
+      "name": "1.0任务/存档导出/科技/LOD",
+      "file": "browser-release-results.json",
+      "kind": "browser",
+      "passed": 14,
+      "completed": true,
+      "result_sha256": "b6f67096c27960983f7abc09df7260e9a9805d5985897b5840b543733930f577"
+    }
+  ],
+  "play_html_sha256": "a846752359976cf47b857a1d6a2e95451a2e965035880a2d59ea9d700e9309b5",
+  "unverified": [
+    "Real public MQTT connection, mainland-China reachability, cross-ISP eight-human full matches",
+    "Windows launcher download/firewall and physical multi-machine LAN",
+    "Browser file/localhost navigation: blocked by environment policy",
+    "Real-origin IndexedDB, cross-browser-restart persistence and WebCrypto in a browser origin",
+    "GPU / RTX4060 frame rate: browser uses software WebGL",
+    "Full original-game mechanics/assets and human mission-balance playthrough",
+    "External security audit, updated ws dependency, long-term broker service operation",
+    "Dedicated cloud service deployment / Docker build; no seamless host migration"
+  ]
+}

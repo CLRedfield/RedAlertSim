@@ -1,0 +1,14 @@
+PASS Eight-section menu initializes without CDN, automatic broker requests or telemetry
+PASS Six mission cards expose separate local and cooperative entry points
+PASS Coop entry locks objective teams/map and defaults to private EMQX invitation mode
+PASS Unavailable secure-context crypto yields an actionable error, not a fake connection
+PASS LAN and public relay forms switch independently without implying an online dedicated server
+PASS Technology view is built from actual nation prerequisites and exposes live unit data
+PASS Contrast and random seed settings apply through visible controls
+PASS Escort launches in the real simulation Worker with mission HUD and map objectives
+PASS Four save slots report blocked storage honestly; real JSON export retains mission state
+PASS Detailed meshes render in medium quality and are actually omitted by distant LOD
+PASS Exit mission returns to operation selection without leaking previous mission setup
+PASS Observer waiting screen supports opening/closing the menu before its first state arrives
+PASS 960-pixel layout remains horizontally contained with the connection controls reachable
+PASS New release screens finish with no uncaught browser exception

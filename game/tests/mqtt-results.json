@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "content": "719fdc55",
+  "environment": "Node 22 native WebSocket/WebCrypto and worker_threads browser-worker adapter; loopback independent MQTT fixture, not a public broker or physical multi-device test",
+  "passed": 18,
+  "failed": 0,
+  "checks": [
+    "MQTT 3.1.1 native WebSocket CONNECT / SUBSCRIBE / QoS1",
+    "Bounded parser accepts fragmentation and rejects oversized length",
+    "ECDH pairwise keys roundtrip, reject wrong AAD and replay",
+    "Browser host starts shared RoomService through MQTT",
+    "Guest joins encrypted invitation without local game server",
+    "Invitations pin broker and host key; malformed invitations rejected",
+    "Room ready / start sends distinct fog-filtered state to both peers",
+    "Encrypted game commands reach authority with sequence acknowledgement",
+    "Relay payload does not contain plaintext commands, player names or snapshots",
+    "Late observer enters read-only delayed spectator mode",
+    "Tampered ciphertext is rejected without applying game state",
+    "Client reconnect reuses seat and synchronizes a fresh baseline",
+    "Large encrypted payload fragments and reassembles completely",
+    "Public directory only appears after explicit public-room creation",
+    "Eight encrypted clients start and receive separately filtered player snapshots",
+    "Host relay outage pauses simulation and resumes its original session",
+    "Observer receives a snapshot no newer than 30 simulated seconds",
+    "Explicit host exit notifies remaining guests and cancels reconnect loops"
+  ],
+  "failures": []
+}

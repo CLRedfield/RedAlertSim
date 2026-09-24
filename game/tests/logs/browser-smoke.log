@@ -1,0 +1,24 @@
+PASS Full offline HTML initialized, WebGL shader compiled without errors
+PASS Single-player Web Worker advances two-seat simulation
+PASS Factory queued in sidebar, placed via mouse, tank trained via production card
+PASS Worker save serialization and loaded state resume
+PASS Pause stops simulation; resume advances it
+PASS All 129 catalog procedural meshes generated and uploaded, one representative rendered without WebGL errors
+PASS Yuri sandbox UI generates five selected units
+PASS Two full browser clients create/join/ready/start real WebSocket room
+PASS No browser JavaScript or WebGL errors recorded
+{
+  "passed": 9,
+  "checks": [
+    "Full offline HTML initialized, WebGL shader compiled without errors",
+    "Single-player Web Worker advances two-seat simulation",
+    "Factory queued in sidebar, placed via mouse, tank trained via production card",
+    "Worker save serialization and loaded state resume",
+    "Pause stops simulation; resume advances it",
+    "All 129 catalog procedural meshes generated and uploaded, one representative rendered without WebGL errors",
+    "Yuri sandbox UI generates five selected units",
+    "Two full browser clients create/join/ready/start real WebSocket room",
+    "No browser JavaScript or WebGL errors recorded"
+  ],
+  "errors": []
+}

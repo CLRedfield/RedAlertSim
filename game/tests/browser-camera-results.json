@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "date": "2026-09-12",
+  "completed": true,
+  "passed": 22,
+  "checks": [
+    "Held right drag pans real rendered battlefield; release preserves selection and sends no command",
+    "Short right click retains classic deselection",
+    "Modern short right click moves units; held drag does not generate an extra move",
+    "Long stationary hold is consumed safely, without moving or deselecting",
+    "Fast deliberate right drag works without waiting for the hold timer",
+    "Dragging preserves ready-building placement; a subsequent short right click cancels it",
+    "Right drag retains unsubmitted Z waypoints; Z release still submits exactly the planned route",
+    "Continuous-scroll preset keeps panning at fixed pointer offset and stops immediately on release",
+    "Actual settings controls alter drag direction and sensitivity",
+    "Middle-button drag remains immediate with right-button dragging disabled",
+    "Edge scroll uses the playable edge and stops while pointer is over production sidebar",
+    "Bottom edge is no longer hidden behind HUD, and hovering bottom controls stops edge panning",
+    "Arrow movement stops on key release; Home focuses selection and End resets zoom",
+    "Actual wheel zoom preserves the world point under the cursor during smooth zoom",
+    "Scrolling the production list does not zoom the map or scroll the document",
+    "Pointer capture lets a battlefield drag end over UI without click-through or production orders",
+    "Synthetic pointercancel/blur and real capture release safely clear dragging without a stale click",
+    "Opening a modal mid-gesture safely stops camera input and does not cancel selected units",
+    "Trackpad preset and local preferences survive leaving and starting another match in the same page",
+    "Real fullscreen button enters/exits fullscreen and camera matrices remain valid",
+    "Two real browser clients: right-drag changes only local camera and emits zero network commands",
+    "Camera UI and multiplayer integration produce no JavaScript or WebGL errors"
+  ],
+  "errors": [],
+  "limitations": [
+    "In-memory page has an opaque origin. Cross-reload localStorage persistence and direct file navigation are not verified; file navigation is blocked by environment policy."
+  ],
+  "environment": "Chromium 144, 1280x800, Xvfb, ANGLE SwiftShader; complete HTML in-memory, real Worker and pointer/keyboard input, loopback networking."
+}

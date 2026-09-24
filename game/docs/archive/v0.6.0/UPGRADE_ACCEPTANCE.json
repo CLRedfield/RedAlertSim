@@ -1,0 +1,260 @@
+{
+  "release": "0.6.0",
+  "baseline": "0.4.0",
+  "allReportItemsCompleted": false,
+  "publicServerDeployed": false,
+  "tasks": [
+    {
+      "id": "F01",
+      "task": "出生映射",
+      "status": "已实现，局部验证",
+      "deliveredAndRemaining": "2/4/6/8 自动点位、手动点位、关闭席位、按队伍分组；实体地图长局平衡待测",
+      "evidence": "data.js; upgrade.test.cjs"
+    },
+    {
+      "id": "F02",
+      "task": "矿区公平性",
+      "status": "部分完成",
+      "deliveredAndRemaining": "八候选位置起始矿类型/容量/距离等价；未完成所有采矿路径收益基准",
+      "evidence": "data.js; upgrade.test.cjs"
+    },
+    {
+      "id": "F03",
+      "task": "队伍合法性",
+      "status": "已实现并测试",
+      "deliveredAndRemaining": "没有敌方/重复颜色/重复点位拦截；训练沙盒按模式豁免",
+      "evidence": "data.js; sim.js; network.test.cjs"
+    },
+    {
+      "id": "F04",
+      "task": "规则与地图标识",
+      "status": "已实现并测试",
+      "deliveredAndRemaining": "实际共享源码 SHA-256 派生版本，规则/地图哈希检查",
+      "evidence": "tools/build.py; network.test.cjs"
+    },
+    {
+      "id": "F05",
+      "task": "恢复统一校验",
+      "status": "已实现并测试",
+      "deliveredAndRemaining": "恢复同样验证版本、随机 token、席位、命令序号；空 token 拒绝",
+      "evidence": "server/server.cjs; network.test.cjs"
+    },
+    {
+      "id": "F06",
+      "task": "配额与攻击面",
+      "status": "部分完成",
+      "deliveredAndRemaining": "连接、房间、实体、消息、队列、积压、进程资源模板有保护；无外部审计/全量极限负载验收",
+      "evidence": "server/server.cjs; sim.js; deploy/"
+    },
+    {
+      "id": "F07",
+      "task": "断线前端状态",
+      "status": "已实现并测试",
+      "deliveredAndRemaining": "连接恢复提示、断线不发命令、不默默切为本地模拟",
+      "evidence": "net.js; app.js; browser_upgrade.py"
+    },
+    {
+      "id": "U01",
+      "task": "界面分层",
+      "status": "已实现，范围有限",
+      "deliveredAndRemaining": "主菜单分区、部署/训练/联机/录像/设置；沿用部分旧暂停和生产 UI，非全面组件化重写",
+      "evidence": "headquarters.js; command.css"
+    },
+    {
+      "id": "U02",
+      "task": "逐席位配置",
+      "status": "已实现并测试",
+      "deliveredAndRemaining": "人类/电脑/关闭、国家/队伍/点位/颜色/难度；房主与自己席位权限限制",
+      "evidence": "headquarters.js; server/server.cjs"
+    },
+    {
+      "id": "U03",
+      "task": "地图预览",
+      "status": "已实现",
+      "deliveredAndRemaining": "六图预览显示真实资源与候选出生点；地形仍是当前平面/海域近似",
+      "evidence": "data.js; headquarters.js"
+    },
+    {
+      "id": "U04",
+      "task": "生产队列信息",
+      "status": "部分完成",
+      "deliveredAndRemaining": "沿用并集成数量、暂停/取消、前置/费用/建造提示；未完成所有单位出口阻塞诊断样式",
+      "evidence": "app.js; operations.test.cjs"
+    },
+    {
+      "id": "U05",
+      "task": "选择/乘员/状态",
+      "status": "已实现，边界待扩测",
+      "deliveredAndRemaining": "分类型选择、逐乘员卸载、IFV/充能/炸弹/飞行状态",
+      "evidence": "headquarters.js; tactics.js"
+    },
+    {
+      "id": "U06",
+      "task": "警报与反馈",
+      "status": "部分完成",
+      "deliveredAndRemaining": "保留事件并增加有界日志、定位与队友标记；不是全量新事件/声音分类系统",
+      "evidence": "headquarters.js; app.js"
+    },
+    {
+      "id": "U07",
+      "task": "键位与镜头",
+      "status": "已回归",
+      "deliveredAndRemaining": "沿用并测试拖图、路径、键位、弹窗和生产快捷键；修复新面板 Escape 空引用",
+      "evidence": "browser_camera.py; browser_operations.py"
+    },
+    {
+      "id": "U08",
+      "task": "结算与再战",
+      "status": "已实现并测试",
+      "deliveredAndRemaining": "统计/曲线/换边、原房重开、投降结果立即刷新",
+      "evidence": "headquarters.js; network.test.cjs"
+    },
+    {
+      "id": "L01",
+      "task": "便携 LAN 启动器",
+      "status": "部分完成，Windows 待验收",
+      "deliveredAndRemaining": "无 npm；使用已有 Node 或首次官方下载校验；未内置二进制，也未验证干净 Windows 离线启动",
+      "evidence": "tools/launch.ps1"
+    },
+    {
+      "id": "L02",
+      "task": "真实 LAN 验证",
+      "status": "未完成",
+      "deliveredAndRemaining": "只做同机真实进程/浏览器协议；没有实体双机/多网卡断外网 4/8 人记录",
+      "evidence": "docs/TEST_REPORT.md"
+    },
+    {
+      "id": "L03",
+      "task": "发现/邀请/诊断",
+      "status": "部分完成",
+      "deliveredAndRemaining": "复制邀请、地址诊断、目录；无广播发现，多网卡可能需选正确地址",
+      "evidence": "headquarters.js; server/server.cjs"
+    },
+    {
+      "id": "G01",
+      "task": "状态矩阵",
+      "status": "已实现，核验待完善",
+      "deliveredAndRemaining": "129 定义列实现/资产/验证状态；没有完成原版逐项数值与场景对照",
+      "evidence": "docs/CONTENT_STATUS.json"
+    },
+    {
+      "id": "G02",
+      "task": "阵营机制样板",
+      "status": "部分完成",
+      "deliveredAndRemaining": "奴隶/IFV/充能/磁电/伊万/航空有独立状态和测试；不是原版全部例外或全组合联机验收",
+      "evidence": "tactics.js; upgrade.test.cjs"
+    },
+    {
+      "id": "G03",
+      "task": "独立地图",
+      "status": "部分完成",
+      "deliveredAndRemaining": "六图独立资源/中立物/道路；无完整高低地/桥梁；所有人数路径与经济长测未完成",
+      "evidence": "data.js; renderer.js"
+    },
+    {
+      "id": "G04",
+      "task": "公平 AI 感知",
+      "status": "部分完成",
+      "deliveredAndRemaining": "战略目标依据自身可见/记忆，困难奖励披露；旧战斗自动目标等近似仍需核验",
+      "evidence": "tactics.js; upgrade.test.cjs"
+    },
+    {
+      "id": "G05",
+      "task": "拥堵与混编",
+      "status": "沿用基础，未专项升级完成",
+      "deliveredAndRemaining": "保留原寻路、出口等待与混编命令；没有新的全局拥堵恢复方案和极限验证",
+      "evidence": "sim.js; operations.test.cjs"
+    },
+    {
+      "id": "G06",
+      "task": "五训练/沙盒",
+      "status": "主要实现",
+      "deliveredAndRemaining": "五实际行为判定目标，可重开，六波挑战；可保存本地场景，复杂中途恢复未全面验证",
+      "evidence": "tactics.js; upgrade.test.cjs"
+    },
+    {
+      "id": "A01",
+      "task": "九对象完整样板",
+      "status": "部分完成",
+      "deliveredAndRemaining": "九对象程序细节/部分动作；无全套独立图标/PBR/LOD/美术管线",
+      "evidence": "art.js; renderer.js"
+    },
+    {
+      "id": "A02",
+      "task": "表现事件/音效",
+      "status": "部分完成",
+      "deliveredAndRemaining": "后坐、步行、烟尘等；沿用生成音效和事件，未建立全量音频分层",
+      "evidence": "renderer.js; app.js"
+    },
+    {
+      "id": "N01",
+      "task": "成熟网络层",
+      "status": "已替换并测试，需安全复核",
+      "deliveredAndRemaining": "ws 8.17.1 随包，无手写帧解析；不是最新依赖或安全审计结论",
+      "evidence": "server/vendor/; network.test.cjs"
+    },
+    {
+      "id": "N02",
+      "task": "真实公网部署",
+      "status": "未完成，外部资源依赖",
+      "deliveredAndRemaining": "无实际中国节点/资源授权/域名/运维承诺；online.json 空，模板未运行",
+      "evidence": "web/online.json; deploy/README.md"
+    },
+    {
+      "id": "N03",
+      "task": "目录/邀请码/路由",
+      "status": "部分完成",
+      "deliveredAndRemaining": "单服务器目录、房间码、私密房；无跨节点路由或全球匹配",
+      "evidence": "server/server.cjs; headquarters.js"
+    },
+    {
+      "id": "N04",
+      "task": "增量协议",
+      "status": "主要实现",
+      "deliveredAndRemaining": "ACK 基线、视野先过滤、恢复全量、量化副本；未完成真实公网带宽目标验收",
+      "evidence": "wire.js; network.test.cjs"
+    },
+    {
+      "id": "N05",
+      "task": "自动重连 UI",
+      "status": "已实现并本机验证",
+      "deliveredAndRemaining": "两分钟恢复、会话/序号、输入锁、强制全量；系统网络切换待实体测试",
+      "evidence": "net.js; browser_upgrade.py"
+    },
+    {
+      "id": "N06",
+      "task": "压力/负面测试",
+      "status": "部分完成",
+      "deliveredAndRemaining": "畸形/大小/频率/越权/版本/刷房/分片测试；非公网慢连接与极限压力全覆盖",
+      "evidence": "network.test.cjs"
+    },
+    {
+      "id": "N07",
+      "task": "跨运营商八人",
+      "status": "未完成",
+      "deliveredAndRemaining": "八虚拟客户端同机测试不能代替中国跨运营商完整局",
+      "evidence": "docs/TEST_REPORT.md"
+    },
+    {
+      "id": "R01",
+      "task": "录像/检查点",
+      "status": "部分完成",
+      "deliveredAndRemaining": "版本、命令、固定种子回放与 seek；从初始状态重算，非优化检查点系统",
+      "evidence": "tactics.js; browser_upgrade.py"
+    },
+    {
+      "id": "R02",
+      "task": "观战/合作/挑战",
+      "status": "部分完成",
+      "deliveredAndRemaining": "六波挑战、合作队伍校验、回放切视角；没有实时旁观席或延迟观战",
+      "evidence": "tactics.js; headquarters.js"
+    },
+    {
+      "id": "R03",
+      "task": "批量扩展",
+      "status": "未完成",
+      "deliveredAndRemaining": "新增样板机制和程序细节；未完成全量原版机制/资产流水线扩展",
+      "evidence": "docs/CONTENT_STATUS.md"
+    }
+  ]
+}

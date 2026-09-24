@@ -1,0 +1,262 @@
+{
+  "release": "1.0.0",
+  "baseline": "0.6.0",
+  "allReportItemsCompleted": false,
+  "publicServerDeployed": false,
+  "tasks": [
+    {
+      "id": "F01",
+      "task": "出生映射",
+      "status": "已实现，局部验证",
+      "deliveredAndRemaining": "2/4/6/8 自动点位、手动点位、关闭席位、按队伍分组；实体地图长局平衡待测",
+      "evidence": "data.js; upgrade.test.cjs"
+    },
+    {
+      "id": "F02",
+      "task": "矿区公平性",
+      "status": "部分完成",
+      "deliveredAndRemaining": "八候选位置起始矿类型/容量/距离等价；未完成所有采矿路径收益基准",
+      "evidence": "data.js; upgrade.test.cjs"
+    },
+    {
+      "id": "F03",
+      "task": "队伍合法性",
+      "status": "已实现并测试",
+      "deliveredAndRemaining": "没有敌方/重复颜色/重复点位拦截；训练沙盒按模式豁免",
+      "evidence": "data.js; sim.js; network.test.cjs"
+    },
+    {
+      "id": "F04",
+      "task": "规则与地图标识",
+      "status": "已实现并测试",
+      "deliveredAndRemaining": "协议5，规范化数据与实际共享模拟、任务、权威房间、MQTT源码共同构建SHA-256身份；所有参与者需使用同一发布包",
+      "evidence": "tools/build.py; network.test.cjs; mqtt.test.cjs"
+    },
+    {
+      "id": "F05",
+      "task": "恢复统一校验",
+      "status": "已实现并本机测试",
+      "deliveredAndRemaining": "LAN与MQTT复用随机恢复凭据、版本检查和命令序号；观察者单独恢复；房主中转断线暂停并恢复原席位",
+      "evidence": "authority.js; mqtt-room.js; release.test.cjs; mqtt.test.cjs"
+    },
+    {
+      "id": "F06",
+      "task": "配额与攻击面",
+      "status": "已实现边界，未外部审计",
+      "deliveredAndRemaining": "共享16KB命令限制、频率/席位权限、MQTT分片/解压/积压边界与加密重放检查；不是完整安全认证",
+      "evidence": "authority.js; mqtt-wire.js; mqtt-room.js; SECURITY.md"
+    },
+    {
+      "id": "F07",
+      "task": "断线前端状态",
+      "status": "已实现并测试",
+      "deliveredAndRemaining": "连接恢复提示、断线不发命令、不默默切为本地模拟",
+      "evidence": "net.js; app.js; browser_upgrade.py"
+    },
+    {
+      "id": "U01",
+      "task": "界面分层",
+      "status": "已实现",
+      "deliveredAndRemaining": "八区指挥中心；新增合作行动、连接方式、私密口令、观战缓冲、科技树、现场存档和行动记录；保留原有战斗输入",
+      "evidence": "release-ui.js; release.css; browser_release.py"
+    },
+    {
+      "id": "U02",
+      "task": "逐席位配置",
+      "status": "已实现并测试",
+      "deliveredAndRemaining": "人类/电脑/关闭、国家/队伍/点位/颜色/难度；房主与自己席位权限限制",
+      "evidence": "headquarters.js; server/server.cjs"
+    },
+    {
+      "id": "U03",
+      "task": "地图预览",
+      "status": "已实现",
+      "deliveredAndRemaining": "六图预览显示真实资源与候选出生点；地形仍是当前平面/海域近似",
+      "evidence": "data.js; headquarters.js"
+    },
+    {
+      "id": "U04",
+      "task": "生产队列信息",
+      "status": "部分完成",
+      "deliveredAndRemaining": "沿用并集成数量、暂停/取消、前置/费用/建造提示；未完成所有单位出口阻塞诊断样式",
+      "evidence": "app.js; operations.test.cjs"
+    },
+    {
+      "id": "U05",
+      "task": "选择/乘员/状态",
+      "status": "已实现，组合边界仍待扩测",
+      "deliveredAndRemaining": "分类型选择、独立乘员卸载和状态延续；只读观察者不显示可执行操作，任务HUD显示真实目标进度",
+      "evidence": "headquarters.js; release-ui.js; tactics.js"
+    },
+    {
+      "id": "U06",
+      "task": "警报与反馈",
+      "status": "部分完成",
+      "deliveredAndRemaining": "保留事件并增加有界日志、定位与队友标记；不是全量新事件/声音分类系统",
+      "evidence": "headquarters.js; app.js"
+    },
+    {
+      "id": "U07",
+      "task": "键位与镜头",
+      "status": "已回归",
+      "deliveredAndRemaining": "沿用并测试拖图、路径、键位、弹窗和生产快捷键；修复新面板 Escape 空引用",
+      "evidence": "browser_camera.py; browser_operations.py"
+    },
+    {
+      "id": "U08",
+      "task": "结算与再战",
+      "status": "已实现并测试",
+      "deliveredAndRemaining": "统计/曲线/换边、原房重开、投降结果立即刷新",
+      "evidence": "headquarters.js; network.test.cjs"
+    },
+    {
+      "id": "L01",
+      "task": "便携 LAN 启动器",
+      "status": "部分完成，Windows 待验收",
+      "deliveredAndRemaining": "无 npm；使用已有 Node 或首次官方下载校验；未内置二进制，也未验证干净 Windows 离线启动",
+      "evidence": "tools/launch.ps1"
+    },
+    {
+      "id": "L02",
+      "task": "真实 LAN 验证",
+      "status": "未完成",
+      "deliveredAndRemaining": "只做同机真实进程/浏览器协议；没有实体双机/多网卡断外网 4/8 人记录",
+      "evidence": "docs/TEST_REPORT.md"
+    },
+    {
+      "id": "L03",
+      "task": "发现/邀请/诊断",
+      "status": "已实现邀请与诊断，非广播发现",
+      "deliveredAndRemaining": "LAN链接、MQTT完整加密邀请、节点选择、握手/订阅诊断与房间目录；无LAN广播发现",
+      "evidence": "release-ui.js; mqtt-room.js; NETWORK_MQTT.md"
+    },
+    {
+      "id": "G01",
+      "task": "状态矩阵",
+      "status": "已实现内容表，非原版认证",
+      "deliveredAndRemaining": "129实体按实际代码导出属性、前置、116个细节层与网格预算；原版逐项行为对照仍未完成",
+      "evidence": "CONTENT_STATUS.json; tools/audit-content.cjs"
+    },
+    {
+      "id": "G02",
+      "task": "阵营机制样板",
+      "status": "部分完成",
+      "deliveredAndRemaining": "奴隶/IFV/充能/磁电/伊万/航空有独立状态和测试；不是原版全部例外或全组合联机验收",
+      "evidence": "tactics.js; upgrade.test.cjs"
+    },
+    {
+      "id": "G03",
+      "task": "独立地图",
+      "status": "部分完成",
+      "deliveredAndRemaining": "六图独立资源/中立物/道路；无完整高低地/桥梁；所有人数路径与经济长测未完成",
+      "evidence": "data.js; renderer.js"
+    },
+    {
+      "id": "G04",
+      "task": "公平 AI 感知",
+      "status": "改进并专项验证",
+      "deliveredAndRemaining": "延续侦察/记忆AI；友军会跟随护送、占点、营救与攻坚，保留生产维修；工程师接近公开目标后仍需看见才能捕获",
+      "evidence": "operations.js; release.test.cjs"
+    },
+    {
+      "id": "G05",
+      "task": "拥堵与混编",
+      "status": "新增停滞恢复，未极限验收",
+      "deliveredAndRemaining": "停滞超过约2秒清理路径缓存重算，不传送单位；大型混编与全部地形的拥堵边界仍待实战",
+      "evidence": "operations.js; operations.test.cjs"
+    },
+    {
+      "id": "G06",
+      "task": "五训练/沙盒",
+      "status": "主要实现",
+      "deliveredAndRemaining": "五实际行为判定目标，可重开，六波挑战；可保存本地场景，复杂中途恢复未全面验证",
+      "evidence": "tactics.js; upgrade.test.cjs"
+    },
+    {
+      "id": "A01",
+      "task": "九对象完整样板",
+      "status": "扩展程序化细节与LOD",
+      "deliveredAndRemaining": "九基准模型延续；116实体新增独立细节层，中高画质近景显示、低画质或远景省略；非全套PBR/独立图标/原版高精度重制",
+      "evidence": "art-expanded.js; renderer.js; release.test.cjs; browser_release.py"
+    },
+    {
+      "id": "A02",
+      "task": "表现事件/音效",
+      "status": "部分完成",
+      "deliveredAndRemaining": "后坐、步行、烟尘等；沿用生成音效和事件，未建立全量音频分层",
+      "evidence": "renderer.js; app.js"
+    },
+    {
+      "id": "N01",
+      "task": "成熟网络层",
+      "status": "双传输实现并测试，需安全复核",
+      "deliveredAndRemaining": "LAN延续ws 8.17.1；新增原生MQTT3.1.1 QoS0/1子集，无外部前端SDK，使用WSS与应用层独立加密通道",
+      "evidence": "mqtt-wire.js; mqtt.test.cjs; SECURITY.md"
+    },
+    {
+      "id": "N02",
+      "task": "真实公网部署",
+      "status": "按新需求完成公共中转接入；真实公网未验收",
+      "deliveredAndRemaining": "默认EMQX及用户候选地址，浏览器房主运行共享规则。不是部署国内专用服务，不保证节点可达或持续可用；测试为独立本机MQTT服务",
+      "evidence": "mqtt-room.js; NETWORK_MQTT.md; mqtt.test.cjs"
+    },
+    {
+      "id": "N03",
+      "task": "目录/邀请码/路由",
+      "status": "已实现单节点目录与私密邀请",
+      "deliveredAndRemaining": "仅明确公开时发布目录；RA1口令绑定节点、房间密钥、主机公钥；不支持跨节点统一匹配或全网搜索",
+      "evidence": "mqtt-room.js; release-ui.js; mqtt.test.cjs"
+    },
+    {
+      "id": "N04",
+      "task": "增量协议",
+      "status": "已实现并本机测试",
+      "deliveredAndRemaining": "视野过滤后ACK增量；MQTT增加压缩、加密、有界分片；拥堵丢弃冗余状态并请求重同步，实际跨网带宽目标未验收",
+      "evidence": "wire.js; mqtt-room.js; mqtt.test.cjs"
+    },
+    {
+      "id": "N05",
+      "task": "自动重连 UI",
+      "status": "已实现本机恢复",
+      "deliveredAndRemaining": "访客保留原席位恢复；主机中转掉线暂停模拟、重连恢复；主动主机退出通知访客。关闭主机页面不能无缝迁移",
+      "evidence": "mqtt-room.js; net.js; mqtt.test.cjs"
+    },
+    {
+      "id": "N06",
+      "task": "压力/负面测试",
+      "status": "扩大负面/八客户端测试，非生产压测",
+      "deliveredAndRemaining": "身份、越权、重放、密文损坏、大消息、八加密客户端、主机故障和延迟观战；未做公网恶意流量审计",
+      "evidence": "release.test.cjs; mqtt.test.cjs; network.test.cjs"
+    },
+    {
+      "id": "N07",
+      "task": "跨运营商八人",
+      "status": "未完成",
+      "deliveredAndRemaining": "八虚拟客户端同机测试不能代替中国跨运营商完整局",
+      "evidence": "docs/TEST_REPORT.md"
+    },
+    {
+      "id": "R01",
+      "task": "录像/检查点",
+      "status": "已实现检查点录像",
+      "deliveredAndRemaining": "v2录像按60秒保存检查点，最多12个且8MB预算；按最近检查点定位，保留命令记录；同内容版本确定性验证",
+      "evidence": "operations.js; release.test.cjs; browser_upgrade.py"
+    },
+    {
+      "id": "R02",
+      "task": "观战/合作/挑战",
+      "status": "已实现六合作任务与实时延迟观察",
+      "deliveredAndRemaining": "六任务有真实胜负条件、友军AI、单人/双人入口；最多4观察者，30秒模拟时间延迟、只读、禁向参战者聊天",
+      "evidence": "operations.js; authority.js; release-ui.js; release.test.cjs; mqtt.test.cjs"
+    },
+    {
+      "id": "R03",
+      "task": "批量扩展",
+      "status": "已扩展程序化资产与任务管线；非全部原版完成",
+      "deliveredAndRemaining": "116细节层通过有限网格预算，六任务共用模拟/存档/回放/联机；仍有原版机制例外、海陆地形、美术精度与全组合验证缺口",
+      "evidence": "art-expanded.js; operations.js; CONTENT_STATUS.json"
+    }
+  ],
+  "publicMqttRelayImplemented": true,
+  "publicMqttExternalConnectivityVerified": false
+}
